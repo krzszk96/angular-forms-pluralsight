@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { UserSettings } from 'src/app/data/user-settings';
 
 @Component({
   selector: 'app-user-settings-form',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSettingsFormComponent implements OnInit {
 
+  originalusersettings: UserSettings = {
+    name: '',
+    emailOffers: true,
+    interfaceStyle: '',
+    subscriptionType: '',
+    notes: ''
+  };
+
+  usersettings: UserSettings = {
+    ...this.originalusersettings
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    console.log('in onSubmit', form.valid);
+    
   }
 
 }
