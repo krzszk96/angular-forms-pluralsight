@@ -5,3 +5,19 @@
 .ng-invalid:not(form).ng-touched{
   border: 1px solid red;
 }
+
+.container{
+  background-color: moccasin;
+
+  &__title{
+    color: black;
+  }
+  &__subtitle{
+    color: black;
+  }
+  &__subtitle:hover{
+    color: black;
+  }
+
+
+}

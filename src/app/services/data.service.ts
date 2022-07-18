@@ -14,3 +14,4 @@ export class DataService {
     return this.http.post('https://putsreq.com/sBvJz9RxLyPsblCtUBXO', userSettings);
   }
 }
+  
